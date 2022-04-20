@@ -40,13 +40,13 @@
         cartObject.doEverythingTimeout();
       },
 
-      doEverythingTimeout: function () {
+        doEverythingTimeout: function () {
         const e = this;
         setTimeout(() => { window.$ ? ( cartObject.kickoff(), cartObject.appendNewStyle() ) : e.doEverythingTimeout();
         }, 2000);
       },
 
-      appendNewStyle:  () => {
+        appendNewStyle:  () => {
       const head = document.head || document.getElementsByTagName("head")[0],
       style = document.createElement("style");
       (style.type = "text/css"),
@@ -81,7 +81,7 @@
       head.appendChild(style);
       },
 
-      kickoff: () => {
+        kickoff: () => {
        const cartSkus = document.querySelectorAll('.info-left-code');
        const cartWrappers = document.querySelectorAll('.delivery-info-description-wrapper');
 
@@ -205,10 +205,11 @@
 
       };
       return { main: cartObject };
-      })()),
+      })()
+      ),
       cheillondon.targetBoilerplate.main.init();
       },
-      ],
+    ],
   },
  {},
 [1]
