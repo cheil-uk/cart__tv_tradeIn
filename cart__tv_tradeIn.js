@@ -92,7 +92,7 @@ const cartObject = {
                                 "ga-ca"           : "option click"
                             });
                             input.onclick = () => {
-                                tagging($(this).attr('data-omni'));
+                                tagging(input.getAttribute('data-omni'));
                             }
                         })
                     }
