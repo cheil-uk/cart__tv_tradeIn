@@ -10,7 +10,7 @@ const cartObject = {
     doEverythingTimeout: () => {
         const e = this;
         setTimeout(() => { window.$ ? ( cartObject.kickoff(), cartObject.appendNewStyle() ) : e.doEverythingTimeout();
-        }, 2000);
+        }, 5000);
     },
     appendNewStyle: () => {
     //find a way to implement scss
@@ -48,6 +48,7 @@ const cartObject = {
     head.appendChild(style);
     },
     kickoff: () => {
+    console.log('we have kickoff') // this is purely for testing
     const cartWrappers = document.querySelectorAll('.delivery-info-description-wrapper');
     const addTagging = (el, attrs) => {
         for(let key in attrs) {
